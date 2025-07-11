@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>SamSender - WhatsApp</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+      font-family: "Montserrat", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 600;
+      font-style: normal;
+      background-color: #282b3a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: "Montserrat", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 600;
+      font-style: normal;
+    }
+
+    textarea {
+      resize: vertical;
+      width: 100%;
+      margin-top: 10px;
+      font-size: 16px;
+      padding: 10px;
+      font: black;
+      font-family: "Montserrat", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 600;
+      font-style: normal;
+    }
+
+    input[type="file"],
+    button {
+      width: 100%;
+      margin-top: 10px;
+      font-size: 16px;
+      padding: 10px;
+      font-family: "Montserrat", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 600;
+      font-style: normal;
+    }
+
+    #status {
+      margin-top: 15px;
+      font-weight: bold;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    #status img {
+      width: 24px;
+      height: 24px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>SamSender</h1>
+
+    <label>Mensagem</label>
+    <textarea id="mensagem" rows="5" placeholder="Digite a mensagem aqui..."></textarea>
+
+    <label>Selecionar Planilha (.xlsx):</label>
+    <input type="file" id="file-input" accept=".xlsx" />
+
+    <button id="enviar-btn">Enviar Mensagens</button>
+
+    <p id="status">
+      <img style="height: 40px; width: 40px;"
+        src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2VkbWU1aHIwZHR5cjhiOTJ3cHYwdXNmcjgyeHA4Z3NvOGFmdHF6dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XunOdEWPoTCxraOxzN/giphy.gif"
+        alt="Carregando..." />
+      <span>Status: Aguardando ação...</span>
+    </p>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+
+</html>
